@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>clash tun 模式下无法连接 ssh</title>
+      <link href="/2024/09/08/about-port/"/>
+      <url>/2024/09/08/about-port/</url>
+      
+        <content type="html"><![CDATA[<h1 id="clash-tun-模式下无法连接-ssh"><a href="#clash-tun-模式下无法连接-ssh" class="headerlink" title="clash tun 模式下无法连接 ssh"></a>clash tun 模式下无法连接 ssh</h1><h3 id="在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错"><a href="#在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错" class="headerlink" title="在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错"></a>在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错</h3><p align = "center">    <img  src="/img/err.png" width="450" /></p>经过一番查找，发现是机场将端口22禁用了，ssh默认端口正是22。<h3 id="两种解决方式"><a href="#两种解决方式" class="headerlink" title="两种解决方式"></a>两种解决方式</h3><p>1.在clash中自定义规则，将通过端口22的流量走直连Direct</p><p align = "center">    <img  src="/img/pt22.png" width="450" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- DST-PORT,22,DIRECT</span><br></pre></td></tr></table></figure><p>2.修改ssh端口</p><p align = "center">    <img  src="/img/ssh.png" width="450" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></table></figure><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p align = "center">    <img  src="/img/cor.png" width="450" /></p><h3 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h3><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port</a><br><a href="https://github.com/vernesong/OpenClash/issues/1960">https://github.com/vernesong/OpenClash/issues/1960</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown基础语法!</title>
       <link href="/2024/09/08/test/"/>
       <url>/2024/09/08/test/</url>
@@ -24,6 +37,12 @@
         <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>赣他娘的GFW，逼github连了两个小时。</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>总之，子安的小站磕磕绊绊终于是有点样子了。</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.fkme.com/">www.fkme.com</a></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -55,22 +74,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }]]></content>
       
     </entry>
     
