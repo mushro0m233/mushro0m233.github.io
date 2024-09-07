@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Markdown基础语法!</title>
+      <link href="/2024/09/08/test/"/>
+      <url>/2024/09/08/test/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Markdown基础语法"><a href="#Markdown基础语法" class="headerlink" title="Markdown基础语法"></a>Markdown基础语法</h1><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>第一段文本<br>第二段文本</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p><strong>加粗文字</strong><br><strong>除了****，下划线也可以加粗</strong></p><p>用单星号括起来就是<em>斜体</em>  </p><p><em><strong>加粗又斜体</strong></em></p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>被波浪框起来就是 <del>这样</del><br>分割线 三个***</p><hr><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a><strong>无序列表</strong></h3><ul><li>列表*</li></ul><ul><li>列表-</li></ul><ul><li>列表+</li></ul><hr><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a><strong>有序列表</strong></h3><ol><li>列表1</li><li>列表2</li></ol><hr><h3 id="二级列表"><a href="#二级列表" class="headerlink" title="二级列表"></a><strong>二级列表</strong></h3><ol><li>这是一级列表<ol><li>这是二级列表<ol><li>这是三级列表<ol><li>这是四级列表</li></ol></li></ol></li></ol></li></ol><hr><h3 id="一些列表前的修饰"><a href="#一些列表前的修饰" class="headerlink" title="一些列表前的修饰"></a><strong>一些列表前的修饰</strong></h3><ul><li>普通列表</li><li><input disabled="" type="checkbox"> 未完成任务</li><li><input checked="" disabled="" type="checkbox"> 已完成任务</li></ul><hr><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a><strong>代码块</strong></h2><ul><li>方法一</li></ul><p>每行代码前输入四个空格  </p><pre><code>  println(&quot;&quot;Hello World&quot;)</code></pre><ul><li>方法二</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;a&quot;</span>);</span><br></pre></td></tr></table></figure><hr><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>引用部分<br>换行</p><p>换段</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>First Blog!</title>
+      <link href="/2024/01/18/first-blog/"/>
+      <url>/2024/01/18/first-blog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>赣他娘的GFW，逼github连了两个小时。</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>总之，子安的小站磕磕绊绊终于是有点样子了。</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.fkme.com/">www.fkme.com</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+  
+</search>
