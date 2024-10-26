@@ -8,9 +8,15 @@
       <link href="/2024/10/27/picBed/"/>
       <url>/2024/10/27/picBed/</url>
       
-        <content type="html"><![CDATA[<h1 id="使用Github-jsDelivr-PicGO-搭建属于你的个人图床"><a href="#使用Github-jsDelivr-PicGO-搭建属于你的个人图床" class="headerlink" title="使用Github+jsDelivr+PicGO,搭建属于你的个人图床"></a>使用Github+jsDelivr+PicGO,搭建属于你的个人图床</h1><p>在编写MD文档时，常常需要插入一些图片，笔者首先采用本地存储方式，写了几篇以后发现实在太不方便，上传博客时还需要将图片再上传一遍，其次， 笔者的博客由GithubPages托管，<br>大陆访问的速度实在让人难以忍受，于是使用GitHub仓库创建一个图床，并且使用jsDelivr作为CDN改善大陆访问速度。</p><h1 id="创建图床仓库："><a href="#创建图床仓库：" class="headerlink" title="创建图床仓库："></a>创建图床仓库：</h1><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep1.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep2.png" width="650"/></div><h1 id="生成Access-token"><a href="#生成Access-token" class="headerlink" title="生成Access token"></a>生成Access token</h1><p>按照下列步骤依次生成token,注意<strong>生成的token只显示一次</strong>，</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep3.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep4.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep5.png" width="650"/></div><p>如果你忘记了自己的token，可以重新生成token，要注意新旧token不一样，记得将旧token替换为新token</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep6.png" width="650"/></div><h1 id="配置PicGo，-将本地图片上传至仓库"><a href="#配置PicGo，-将本地图片上传至仓库" class="headerlink" title="配置PicGo， 将本地图片上传至仓库"></a>配置PicGo， 将本地图片上传至仓库</h1><p>PicGo下载地址： <a href="https://github.com/Molunerfinn/picgo/releases">https://github.com/Molunerfinn/picgo/releases</a></p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep7.png" width="650"/></div><p>自定义域名：因为大陆直连Github速度很慢，所以这里我用了jsDelivr来加速访问，sDelivr在大陆有 CDN 节点，速度非常快。<br>只需将自定义域名设置为<code>&quot;https://cdn.jsdelivr.net/gh/Github用户名/图床仓库名 &quot;</code></p><h1 id="上手使用"><a href="#上手使用" class="headerlink" title="上手使用"></a>上手使用</h1><p>现在你已经配置了一个属于自己的图床，只需将本地图片拖动至PicGo即可上传，在相册中选择需要使用的图片，复制链接，即可愉快使用。</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep8.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep9.png" width="650"/></div><h1 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h1><p><a href="https://www.jsdelivr.com/">https://www.jsdelivr.com/</a></p><p><a href="https://picgo.github.io/PicGo-Doc/">https://picgo.github.io/PicGo-Doc/</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="使用Github-jsDelivr-PicGO-搭建属于你的个人图床"><a href="#使用Github-jsDelivr-PicGO-搭建属于你的个人图床" class="headerlink" title="使用Github+jsDelivr+PicGO,搭建属于你的个人图床"></a>使用Github+jsDelivr+PicGO,搭建属于你的个人图床</h1><p>在编写MD文档时，常常需要插入一些图片，笔者首先采用本地存储方式，写了几篇以后发现实在太不方便，上传博客时还需要将图片再上传一遍，其次， 笔者的博客由GithubPages托管， 大陆访问的速度实在让人难以忍受，于是使用GitHub仓库创建一个图床，并且使用jsDelivr作为CDN改善大陆访问速度。</p><h1 id="创建图床仓库："><a href="#创建图床仓库：" class="headerlink" title="创建图床仓库："></a>创建图床仓库：</h1><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep1.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep2.png" width="650"/></div><h1 id="生成Access-token"><a href="#生成Access-token" class="headerlink" title="生成Access token"></a>生成Access token</h1><p>按照下列步骤依次生成token,注意<strong>生成的token只显示一次</strong>，</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep3.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep4.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep5.png" width="650"/></div><p>如果你忘记了自己的token，可以重新生成token，要注意新旧token不一样，记得将旧token替换为新token</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep6.png" width="650"/></div><h1 id="配置PicGo，-将本地图片上传至仓库"><a href="#配置PicGo，-将本地图片上传至仓库" class="headerlink" title="配置PicGo， 将本地图片上传至仓库"></a>配置PicGo， 将本地图片上传至仓库</h1><p>PicGo下载地址： <a href="https://github.com/Molunerfinn/picgo/releases">https://github.com/Molunerfinn/picgo/releases</a></p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep7.png" width="650"/></div><p>自定义域名：因为大陆直连Github速度很慢，所以这里我用了jsDelivr来加速访问，sDelivr在大陆有 CDN 节点，速度非常快。<br>只需将自定义域名设置为<code>&quot;https://cdn.jsdelivr.net/gh/Github用户名/图床仓库名 &quot;</code></p><h1 id="上手使用"><a href="#上手使用" class="headerlink" title="上手使用"></a>上手使用</h1><p>现在你已经配置了一个属于自己的图床，只需将本地图片拖动至PicGo即可上传，在相册中选择需要使用的图片，复制链接，即可愉快使用。</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep8.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep9.png" width="650"/></div><h1 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h1><p><a href="https://www.jsdelivr.com/">https://www.jsdelivr.com/</a></p><p><a href="https://picgo.github.io/PicGo-Doc/">https://picgo.github.io/PicGo-Doc/</a></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
       
     </entry>
     
@@ -24,6 +30,14 @@
         <content type="html"><![CDATA[<h1 id="Arch-KDE安装踩坑记录"><a href="#Arch-KDE安装踩坑记录" class="headerlink" title="Arch+KDE安装踩坑记录"></a>Arch+KDE安装踩坑记录</h1><p>本文用于记录笔者在安装Arch Linux时踩过的坑，<strong>非安装教程</strong></p><h2 id="分区，格式化，挂载"><a href="#分区，格式化，挂载" class="headerlink" title="分区，格式化，挂载"></a>分区，格式化，挂载</h2><p>笔者在此使用UEFI+GPT 方案，进入<code>cdfisk</code>的分区界面后分区样式如下</p><img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/cfdisk.png" width="650"><p>接下来就是踩坑的地方：笔者按照分区时的磁盘顺序 <code>sda1 -&gt; sda2 -&gt; sda3</code></p><p>而合理的挂载顺序为<code>/mnt -&gt; /mnt/boot -&gt; /mnt/boot/efi</code></p><p>正确示例为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 一定要按照顺序挂载，通常的挂载顺序为顶级目录，然后再挂载次级目录。</span><br><span class="line"># 比如一个合理的挂载顺序是/mnt -&gt; /mnt/boot -&gt; /mnt/boot/efi</span><br><span class="line"># 不按照顺序挂载的结果就是挂载顺序错误的部分目录无法访问，后续生成的fstab数据也会有问题。</span><br><span class="line"># 如果出现这种情况，一定要umount卸载挂载点，再重新进行挂载。</span><br><span class="line">mount --mkdir /dev/sda3 /mnt</span><br><span class="line">mount --mkdir /dev/sda2 /mnt/boot</span><br><span class="line">mount --mkdir /dev/sda1 /mnt/efi</span><br></pre></td></tr></table></figure><h2 id="初期配置"><a href="#初期配置" class="headerlink" title="初期配置"></a>初期配置</h2><p>初次启动系统后，笔者在执行<code>sudo</code> 指令时，遇到了错误: <code>&#39;Username&#39; is not in the sudoers file.</code></p><p>要解决这个问题，需要编辑<code>/etc/soduers.d</code>，但是诡异的是对于<code>soduers.d</code>的编辑需要管理员权限。也就是说，如果我们在目录中犯了一个错误，我们就失去了使用sudo的权利。<br>笔者对于这个问题感到困惑，我们有没有好的方法来编辑文件<code>/etc/sudoers.d</code>？</p><p>要避免决这个问题，唯一的方法是在安装系统时对<code>sudo</code>进行处理:</p><img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/sudoers.png" width="450"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 将根目录切换到/mnt</span><br><span class="line">arch-chroot /mnt</span><br><span class="line"># 此时已经切换到新安装的ArchLinux目录下</span><br><span class="line"># 接下来处理sudo</span><br><span class="line"># 第一种方案是直接在/etc/sudoers.d下创建相关的文件，免去修改/etc/sudoers的一些麻烦之处</span><br><span class="line">echo &quot;%wheel ALL=(ALL:ALL) ALL&quot; &gt; /etc/sudoers.d/wheel</span><br><span class="line"># 第二种方案，编辑/etc/sudoers，反正不是很推荐使用这个方案</span><br><span class="line"># /etc/sudoers默认为只读权限，需要用chmod修改权限后编辑</span><br><span class="line">chmod +w /etc/sudoers</span><br><span class="line">vim /etc/sudoers</span><br><span class="line"># 取消这行的注释：# %wheel ALL=(ALL:ALL) ALL</span><br><span class="line"># 然后保存，恢复/etc/sudoers的权限</span><br><span class="line">chmod -w /etc/sudoers</span><br></pre></td></tr></table></figure><h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>暂时就这些，Arch使用过程中遇到的问题会陆续在这篇文章更新（<del>大概吧</del>）</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 踩坑 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -50,6 +64,12 @@
         <content type="html"><![CDATA[<h1 id="clash-tun-模式下无法连接-ssh"><a href="#clash-tun-模式下无法连接-ssh" class="headerlink" title="clash tun 模式下无法连接 ssh"></a>clash tun 模式下无法连接 ssh</h1><h3 id="在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错"><a href="#在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错" class="headerlink" title="在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错"></a>在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错</h3><p align = "center"><img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/err.png" width="450"></p>经过一番查找，发现是机场将端口22禁用了，ssh默认端口正是22。<h3 id="两种解决方式"><a href="#两种解决方式" class="headerlink" title="两种解决方式"></a>两种解决方式</h3><p>1.在clash中自定义规则，将通过端口22的流量走直连Direct</p><p align = "center"><img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/pt22.png" width="450"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- DST-PORT,22,DIRECT</span><br></pre></td></tr></table></figure><p>2.修改ssh端口</p><p align = "center"><img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/ssh.png" width="450"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></table></figure><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p align = "center"><img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/cor.png" width="450"/></p><h3 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h3><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port</a><br><a href="https://github.com/vernesong/OpenClash/issues/1960">https://github.com/vernesong/OpenClash/issues/1960</a></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 踩坑 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -113,9 +133,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -124,9 +144,9 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
