@@ -30,11 +30,11 @@
     
     
     <entry>
-      <title>clash tun 模式下无法连接 ssh</title>
-      <link href="/2024/09/08/about-port/"/>
-      <url>/2024/09/08/about-port/</url>
+      <title>Markdown基础语法!</title>
+      <link href="/2024/09/08/test/"/>
+      <url>/2024/09/08/test/</url>
       
-        <content type="html"><![CDATA[<h1 id="clash-tun-模式下无法连接-ssh"><a href="#clash-tun-模式下无法连接-ssh" class="headerlink" title="clash tun 模式下无法连接 ssh"></a>clash tun 模式下无法连接 ssh</h1><h3 id="在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错"><a href="#在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错" class="headerlink" title="在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错"></a>在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错</h3><p align = "center">    <img  src="/img/err.png" width="450" /></p>经过一番查找，发现是机场将端口22禁用了，ssh默认端口正是22。<h3 id="两种解决方式"><a href="#两种解决方式" class="headerlink" title="两种解决方式"></a>两种解决方式</h3><p>1.在clash中自定义规则，将通过端口22的流量走直连Direct</p><p align = "center">    <img  src="/img/pt22.png" width="450" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- DST-PORT,22,DIRECT</span><br></pre></td></tr></table></figure><p>2.修改ssh端口</p><p align = "center">    <img  src="/img/ssh.png" width="450" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></table></figure><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p align = "center">    <img  src="/img/cor.png" width="450" /></p><h3 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h3><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port</a><br><a href="https://github.com/vernesong/OpenClash/issues/1960">https://github.com/vernesong/OpenClash/issues/1960</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Markdown基础语法"><a href="#Markdown基础语法" class="headerlink" title="Markdown基础语法"></a>Markdown基础语法</h1><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>第一段文本<br>第二段文本</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p><strong>加粗文字</strong><br><strong>除了****，下划线也可以加粗</strong></p><p>用单星号括起来就是<em>斜体</em>  </p><p><em><strong>加粗又斜体</strong></em></p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>被波浪框起来就是 <del>这样</del><br>分割线 三个***</p><hr><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a><strong>无序列表</strong></h3><ul><li>列表*</li></ul><ul><li>列表-</li></ul><ul><li>列表+</li></ul><hr><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a><strong>有序列表</strong></h3><ol><li>列表1</li><li>列表2</li></ol><hr><h3 id="二级列表"><a href="#二级列表" class="headerlink" title="二级列表"></a><strong>二级列表</strong></h3><ol><li>这是一级列表<ol><li>这是二级列表<ol><li>这是三级列表<ol><li>这是四级列表</li></ol></li></ol></li></ol></li></ol><hr><h3 id="一些列表前的修饰"><a href="#一些列表前的修饰" class="headerlink" title="一些列表前的修饰"></a><strong>一些列表前的修饰</strong></h3><ul><li>普通列表</li><li><input disabled="" type="checkbox"> 未完成任务</li><li><input checked="" disabled="" type="checkbox"> 已完成任务</li></ul><hr><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a><strong>代码块</strong></h2><ul><li>方法一</li></ul><p>每行代码前输入四个空格  </p><pre><code>  println(&quot;&quot;Hello World&quot;)</code></pre><ul><li>方法二</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;a&quot;</span>);</span><br></pre></td></tr></table></figure><hr><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>引用部分<br>换行</p><p>换段</p></blockquote>]]></content>
       
       
       
@@ -43,11 +43,11 @@
     
     
     <entry>
-      <title>Markdown基础语法!</title>
-      <link href="/2024/09/08/test/"/>
-      <url>/2024/09/08/test/</url>
+      <title>clash tun 模式下无法连接 ssh</title>
+      <link href="/2024/09/08/about-port/"/>
+      <url>/2024/09/08/about-port/</url>
       
-        <content type="html"><![CDATA[<h1 id="Markdown基础语法"><a href="#Markdown基础语法" class="headerlink" title="Markdown基础语法"></a>Markdown基础语法</h1><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>第一段文本<br>第二段文本</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p><strong>加粗文字</strong><br><strong>除了****，下划线也可以加粗</strong></p><p>用单星号括起来就是<em>斜体</em>  </p><p><em><strong>加粗又斜体</strong></em></p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>被波浪框起来就是 <del>这样</del><br>分割线 三个***</p><hr><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a><strong>无序列表</strong></h3><ul><li>列表*</li></ul><ul><li>列表-</li></ul><ul><li>列表+</li></ul><hr><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a><strong>有序列表</strong></h3><ol><li>列表1</li><li>列表2</li></ol><hr><h3 id="二级列表"><a href="#二级列表" class="headerlink" title="二级列表"></a><strong>二级列表</strong></h3><ol><li>这是一级列表<ol><li>这是二级列表<ol><li>这是三级列表<ol><li>这是四级列表</li></ol></li></ol></li></ol></li></ol><hr><h3 id="一些列表前的修饰"><a href="#一些列表前的修饰" class="headerlink" title="一些列表前的修饰"></a><strong>一些列表前的修饰</strong></h3><ul><li>普通列表</li><li><input disabled="" type="checkbox"> 未完成任务</li><li><input checked="" disabled="" type="checkbox"> 已完成任务</li></ul><hr><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a><strong>代码块</strong></h2><ul><li>方法一</li></ul><p>每行代码前输入四个空格  </p><pre><code>  println(&quot;&quot;Hello World&quot;)</code></pre><ul><li>方法二</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;a&quot;</span>);</span><br></pre></td></tr></table></figure><hr><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>引用部分<br>换行</p><p>换段</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="clash-tun-模式下无法连接-ssh"><a href="#clash-tun-模式下无法连接-ssh" class="headerlink" title="clash tun 模式下无法连接 ssh"></a>clash tun 模式下无法连接 ssh</h1><h3 id="在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错"><a href="#在clash-tun模式下，似乎无法使用ssh，无论是hexo-d还是git-push都会报错" class="headerlink" title="在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错"></a>在clash tun模式下，似乎无法使用ssh，无论是hexo d还是git push都会报错</h3><p align = "center">    <img  src="/img/err.png" width="450" /></p>经过一番查找，发现是机场将端口22禁用了，ssh默认端口正是22。<h3 id="两种解决方式"><a href="#两种解决方式" class="headerlink" title="两种解决方式"></a>两种解决方式</h3><p>1.在clash中自定义规则，将通过端口22的流量走直连Direct</p><p align = "center">    <img  src="/img/pt22.png" width="450" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- DST-PORT,22,DIRECT</span><br></pre></td></tr></table></figure><p>2.修改ssh端口</p><p align = "center">    <img  src="/img/ssh.png" width="450" /></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></table></figure><h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p align = "center">    <img  src="/img/cor.png" width="450" /></p><h3 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h3><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port</a><br><a href="https://github.com/vernesong/OpenClash/issues/1960">https://github.com/vernesong/OpenClash/issues/1960</a></p>]]></content>
       
       
       
@@ -89,22 +89,22 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }  /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }  /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }/* 指针配置开始/* 全局默认鼠标指针 */body,html{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/normal-select.cur'),auto !important;}/* 悬停图片时的鼠标指针 */img{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto !important;}/* 选择链接标签时的鼠标指针 */a:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 选中输入框时的鼠标指针 */input:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/handwriting.cur'),auto;}/* 悬停按钮时的鼠标指针 */button:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停列表标签时的鼠标指针 */i:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */#footer-wrap a:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停页码时的鼠标指针 */#pagination .page-number:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停菜单栏时的鼠标指针 */#nav .site-page:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 首页文章卡片 */#recent-posts > .recent-post-item{  background:rgba(255, 255, 255, 0.9);}/* 首页侧栏卡片 */.card-widget{  background:rgba(255, 255, 255, 0.9)!important;}/* 文章页面正文背景 */div#post{  background: rgba(255, 255, 255, 0.9);}/* 分页页面 */div#page{  background: rgba(255, 255, 255, 0.9);}/* 归档页面 */div#archive{  background: rgba(255, 255, 255, 0.9);}/* 标签页面 */div#tag{  background: rgba(255, 255, 255, 0.9);}/* 分类页面 */div#category{  background: rgba(255, 255, 255, 0.9);}/* 页脚透明 */#footer{  background: transparent!important;}/* 头图透明 */#page-header{  background: transparent!important;}/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */#page-header.post-bg:before {  background-color: transparent!important;}/*夜间模式伪类遮罩层透明*/[data-theme="dark"]#footer::before{  background: transparent!important;}[data-theme="dark"]#page-header::before{  background: transparent!important;}/*指针配置结束]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
