@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Github+jsDelivr+PicGO 搭建你的个人图床</title>
+      <link href="/2024/10/27/picBed/"/>
+      <url>/2024/10/27/picBed/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用Github-jsDelivr-PicGO-搭建属于你的个人图床"><a href="#使用Github-jsDelivr-PicGO-搭建属于你的个人图床" class="headerlink" title="使用Github+jsDelivr+PicGO,搭建属于你的个人图床"></a>使用Github+jsDelivr+PicGO,搭建属于你的个人图床</h1><p>在编写MD文档时，常常需要插入一些图片，笔者首先采用本地存储方式，写了几篇以后发现实在太不方便，上传博客时还需要将图片再上传一遍，其次， 笔者的博客由GithubPages托管，<br>大陆访问的速度实在让人难以忍受，于是使用GitHub仓库创建一个图床，并且使用jsDelivr作为CDN改善大陆访问速度。</p><h1 id="创建图床仓库："><a href="#创建图床仓库：" class="headerlink" title="创建图床仓库："></a>创建图床仓库：</h1><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep1.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep2.png" width="650"/></div><h1 id="生成Access-token"><a href="#生成Access-token" class="headerlink" title="生成Access token"></a>生成Access token</h1><p>按照下列步骤依次生成token,注意<strong>生成的token只显示一次</strong>，</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep3.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep4.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep5.png" width="650"/></div><p>如果你忘记了自己的token，可以重新生成token，要注意新旧token不一样，记得将旧token替换为新token</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/postImg/picBedStep6.png" width="650"/></div><h1 id="配置PicGo，-将本地图片上传至仓库"><a href="#配置PicGo，-将本地图片上传至仓库" class="headerlink" title="配置PicGo， 将本地图片上传至仓库"></a>配置PicGo， 将本地图片上传至仓库</h1><p>PicGo下载地址： <a href="https://github.com/Molunerfinn/picgo/releases">https://github.com/Molunerfinn/picgo/releases</a></p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep7.png" width="650"/></div><p>自定义域名：因为大陆直连Github速度很慢，所以这里我用了jsDelivr来加速访问，sDelivr在大陆有 CDN 节点，速度非常快。<br>只需将自定义域名设置为<code>&quot;https://cdn.jsdelivr.net/gh/Github用户名/图床仓库名 &quot;</code></p><h1 id="上手使用"><a href="#上手使用" class="headerlink" title="上手使用"></a>上手使用</h1><p>现在你已经配置了一个属于自己的图床，只需将本地图片拖动至PicGo即可上传，在相册中选择需要使用的图片，复制链接，即可愉快使用。</p><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep8.png" width="650"/></div><div align=center>!<img src="https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/picBedStep9.png" width="650"/></div><h1 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h1><p><a href="https://www.jsdelivr.com/">https://www.jsdelivr.com/</a></p><p><a href="https://picgo.github.io/PicGo-Doc/">https://picgo.github.io/PicGo-Doc/</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arch+KDE安装踩坑记录</title>
       <link href="/2024/10/25/Arch+KDE%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
       <url>/2024/10/25/Arch+KDE%E5%AE%89%E8%A3%85%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
@@ -89,11 +102,11 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }  /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }  /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }/* 指针配置开始/* 全局默认鼠标指针 */body,html{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/normal-select.cur'),auto !important;}/* 悬停图片时的鼠标指针 */img{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto !important;}/* 选择链接标签时的鼠标指针 */a:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 选中输入框时的鼠标指针 */input:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/handwriting.cur'),auto;}/* 悬停按钮时的鼠标指针 */button:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停列表标签时的鼠标指针 */i:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */#footer-wrap a:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停页码时的鼠标指针 */#pagination .page-number:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停菜单栏时的鼠标指针 */#nav .site-page:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 首页文章卡片 */#recent-posts > .recent-post-item{  background:rgba(255, 255, 255, 0.9);}/* 首页侧栏卡片 */.card-widget{  background:rgba(255, 255, 255, 0.9)!important;}/* 文章页面正文背景 */div#post{  background: rgba(255, 255, 255, 0.9);}/* 分页页面 */div#page{  background: rgba(255, 255, 255, 0.9);}/* 归档页面 */div#archive{  background: rgba(255, 255, 255, 0.9);}/* 标签页面 */div#tag{  background: rgba(255, 255, 255, 0.9);}/* 分类页面 */div#category{  background: rgba(255, 255, 255, 0.9);}/* 页脚透明 */#footer{  background: transparent!important;}/* 头图透明 */#page-header{  background: transparent!important;}/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */#page-header.post-bg:before {  background-color: transparent!important;}/*夜间模式伪类遮罩层透明*/[data-theme="dark"]#footer::before{  background: transparent!important;}[data-theme="dark"]#page-header::before{  background: transparent!important;}/*指针配置结束]]></content>
       
     </entry>
     
@@ -111,11 +124,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }  /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }  /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }/* 指针配置开始/* 全局默认鼠标指针 */body,html{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/normal-select.cur'),auto !important;}/* 悬停图片时的鼠标指针 */img{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto !important;}/* 选择链接标签时的鼠标指针 */a:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 选中输入框时的鼠标指针 */input:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/handwriting.cur'),auto;}/* 悬停按钮时的鼠标指针 */button:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停列表标签时的鼠标指针 */i:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */#footer-wrap a:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停页码时的鼠标指针 */#pagination .page-number:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 悬停菜单栏时的鼠标指针 */#nav .site-page:hover{  cursor: url('https://cdn.jsdelivr.net/gh/mushro0m233/picBed/img/link-select.cur'),auto;}/* 首页文章卡片 */#recent-posts > .recent-post-item{  background:rgba(255, 255, 255, 0.9);}/* 首页侧栏卡片 */.card-widget{  background:rgba(255, 255, 255, 0.9)!important;}/* 文章页面正文背景 */div#post{  background: rgba(255, 255, 255, 0.9);}/* 分页页面 */div#page{  background: rgba(255, 255, 255, 0.9);}/* 归档页面 */div#archive{  background: rgba(255, 255, 255, 0.9);}/* 标签页面 */div#tag{  background: rgba(255, 255, 255, 0.9);}/* 分类页面 */div#category{  background: rgba(255, 255, 255, 0.9);}/* 页脚透明 */#footer{  background: transparent!important;}/* 头图透明 */#page-header{  background: transparent!important;}/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */#page-header.post-bg:before {  background-color: transparent!important;}/*夜间模式伪类遮罩层透明*/[data-theme="dark"]#footer::before{  background: transparent!important;}[data-theme="dark"]#page-header::before{  background: transparent!important;}/*指针配置结束]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
