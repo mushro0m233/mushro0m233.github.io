@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Docker Manage Mysql</title>
+      <link href="/2024/10/29/Docker%20Manage%20Mysql/"/>
+      <url>/2024/10/29/Docker%20Manage%20Mysql/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Docker-Manage-Mysql"><a href="#Docker-Manage-Mysql" class="headerlink" title="Docker Manage Mysql"></a>Docker Manage Mysql</h1><h2 id="Mysql-远程连接："><a href="#Mysql-远程连接：" class="headerlink" title="Mysql 远程连接："></a>Mysql 远程连接：</h2><ol><li>配置 WSL2 镜像网络</li><li>配置 .wslconfig，物理机中的 WSL 配文件：autoMemoryReclaim&#x3D;disabled</li><li>配置 daemon.json，WSL 中的守护进程：”iptables”:false</li><li>配置 Mysql 端口映射，以防与本地 Mysql 端口冲突</li><li>配置 Mysql 容器端口，绑定 0.0.0.0 </li><li>创建 Mysql 远程连接用户</li><li>配置 WSL2 防火墙，允许 Mysql 端口通过</li><li>测试远程连接</li><li>其他问题</li></ol><h3 id="1-创建-mysql-容器"><a href="#1-创建-mysql-容器" class="headerlink" title="1. 创建 mysql 容器"></a>1. 创建 mysql 容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 拉取 mysql 镜像</span><br><span class="line">docker pull mysql:8.0.36</span><br><span class="line"></span><br><span class="line"># 创建 mysql 容器</span><br><span class="line"># 挂载 etc 目录</span><br><span class="line"># 配置 3307:3306 端口映射</span><br><span class="line"># 配置 root 密码 123456</span><br><span class="line">docker run -d --name mysql \</span><br><span class="line">    -v mysql_etc:/etc/ \</span><br><span class="line">    -p 3307:3306 \</span><br><span class="line">    -e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">    mysql:8.0.36</span><br><span class="line">    </span><br><span class="line"># 配置防火墙，我用的是 iptables，各位修改自己对应的防火墙即可</span><br><span class="line">iptables -A INPUT -p tcp --dport 3307 -j ACCEPT</span><br></pre></td></tr></table></figure><h3 id="2-绑定内循环端口"><a href="#2-绑定内循环端口" class="headerlink" title="2. 绑定内循环端口"></a>2. 绑定内循环端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 此处我是使用 WSL，如果是远程服务器，需要绑定对应的服务器IP</span><br><span class="line"></span><br><span class="line"># 获取挂载路径</span><br><span class="line">docker volume inspect mysql_etc</span><br><span class="line"></span><br><span class="line"># 修改 my.cnf 配置文件</span><br><span class="line">vim /var/lib/docker/volumes/mysql_etc/_data/my.cnf</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">bind-address=0.0.0.0</span><br></pre></td></tr></table></figure><h3 id="3-创建远程连接用户"><a href="#3-创建远程连接用户" class="headerlink" title="3. 创建远程连接用户"></a>3. 创建远程连接用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 进入 mysql 容器</span><br><span class="line">docker exec -it mysql bash</span><br><span class="line"></span><br><span class="line"># 连接 root 登录</span><br><span class="line">mysql -u root -p</span><br><span class="line"></span><br><span class="line"># 创建远程连接用户</span><br><span class="line">CREATE USER &#x27;chen&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;123456&#x27;;</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#x27;chen&#x27;@&#x27;%&#x27; WITH GRANT OPTION;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"></span><br><span class="line"># 查看用户</span><br><span class="line">use mysql</span><br><span class="line">select * from user where user=&#x27;chen&#x27; \G;</span><br></pre></td></tr></table></figure><h3 id="4-测试远程连接"><a href="#4-测试远程连接" class="headerlink" title="4. 测试远程连接"></a>4. 测试远程连接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 重启wsl-&gt;启动docker-&gt;运行mysql容器</span><br><span class="line"># 实例：mysql -h 198.18.0.1 -P 3307 -u chen -p</span><br><span class="line">mysql -h &lt;IP&gt; -P &lt;Port&gt; -u &lt;UserName&gt; -p</span><br></pre></td></tr></table></figure><h3 id="5-其他问题"><a href="#5-其他问题" class="headerlink" title="5. 其他问题"></a>5. 其他问题</h3><h4 id="服务端与客户端版本不匹配"><a href="#服务端与客户端版本不匹配" class="headerlink" title="服务端与客户端版本不匹配"></a>服务端与客户端版本不匹配</h4><ul><li>ERROR 2007 (HY000): Protocol mismatch; server version &#x3D; 11, client version &#x3D; 10</li><li>遇到情况 要么本地安装对应版本的 Mysql Client，要么 docker 拉取对应版本的 mysql 镜像</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>宝塔初体验</title>
       <link href="/2024/10/28/bt/"/>
       <url>/2024/10/28/bt/</url>
@@ -132,9 +151,9 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>标签</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -143,9 +162,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
